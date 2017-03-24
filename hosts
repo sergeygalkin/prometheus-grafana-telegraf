@@ -1,0 +1,14 @@
+[common:children]
+prometheus-kuber
+prometheus-system
+grafana
+[grafana]
+prometheus-k8s.example.com
+[prometheuses:children]
+prometheus-kuber
+prometheus-system
+[prometheus-kuber]
+prometheus-k8s.example.com
+[prometheus-system]
+prometheus-sys.example.com
+

@@ -1,0 +1,11 @@
+--- Makefile	2016-12-07 08:51:03.630455344 +0000
++++ Makefile-new	2016-12-07 08:50:21.794199322 +0000
+@@ -3,7 +3,7 @@
+ # written by Roman Dementiev and Jim Harris
+ #
+ 
+-EXE = pcm-numa.x pcm-power.x pcm.x pcm-sensor.x pcm-msr.x pcm-memory.x pcm-tsx.x pcm-pcie.x pcm-core.x
++EXE = pcm-numa.x pcm-power.x pcm.x pcm-sensor.x pcm-msr.x pcm-memory.x pcm-tsx.x pcm-pcie.x pcm-core.x pcm-memory-one-line.x
+ 
+ all: $(EXE)
+ 

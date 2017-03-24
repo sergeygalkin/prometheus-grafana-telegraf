@@ -1,0 +1,29 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  # Attach these labels to any time series or alerts when communicating with
+  # external systems (federation, remote storage, Alertmanager).
+  external_labels:
+      monitor: 'codelab-monitor'
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    scrape_timeout: 5s
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ['prometheus-sys.example.com:9090']
+
+  - job_name: 'telegraf-systems'
+    scrape_interval: 30s
+    scrape_timeout: 30s
+    file_sd_configs:
+       - files:
+          - targets.yml
